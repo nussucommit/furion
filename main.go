@@ -42,5 +42,9 @@ func newServer(amqpConn *amqp.Connection) *server {
 }
 
 func (s *server) run() error {
+	forever := make(chan bool)
+	fmt.Println("Running")
+	<-forever
+
 	return nil
 }
